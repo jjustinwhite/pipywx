@@ -12,5 +12,5 @@ while True:
         if sensor.data_ready:
             timestamp = time.strftime("%m/%d/%Y %H:%M:%S", time.localtime())
             print(f"[{timestamp}] C02: {sensor.eco2} ppm, TVOC: {sensor.tvoc} ppm, Temperature: {round(sensor.temperature)}°C")
-    except OSError as error:
+    except Exception as error:
         print(error)
